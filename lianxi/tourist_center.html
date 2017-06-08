@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>游客个人中心</title>
+		<link rel="stylesheet" href="css/mine.css" />
+		<script src="js/j.js" type="text/javascript "></script>
+		<script src="js/mine_js.js" type="text/javascript" ></script>
+	</head>
+	<body>
+		<div class="banner_top Top">
+			<span class="fl bt_l "> 
+    				<img class="bt_logo " src="img/logo2.png ">
+    				<input type="text " placeholder="想去哪里呢？ " />
+    				<span class="but ">搜索</span>
+    		</span>
+			<span class="fr bt_r ">
+			<a id="Button1" onclick="ShowDiv('Login','fade') ">登录</a>
+			<a id="Button2" onclick="ShowDiv('SignIn','fade') ">注册</a>
+			<a href="# ">下载App</a>
+			<a class="pc " href="# ">个人中心</a></span>
+    	</div>
+    	<!--登陆弹出框开始-->
+		<div id="fade" class="black_overlay">
+		</div>
+		<div id="Login" class="white_content">
+			<div style="text-align: right; cursor: default; height: 30px; ">
+			     <span style="font-size: 16px; " onclick="CloseDiv( 'Login', 'fade') ">
+			     	<img style=" cursor: pointer; " src="img/close.png ">
+			     </span>
+		    </div>
+		    <h3 class="login_top ">游行一族</h3>
+		    <div class="login_country ">
+		    	<p>国家地区<select>
+		    		           <option value ="volvo ">中国</option>
+							   <option value ="volvo ">Volvo</option>
+							   <option value ="volvo ">Volvo</option>
+							   <option value ="saab ">Saab</option>
+							   <option value="opel ">Opel</option>
+							   <option value="audi ">Audi</option>
+				           </select>
+		        </p>
+		    </div>
+		    <div class="phone_nub ">
+		    	<p>+86<input  class="P_number "  type="text " placeholder="请输入您的手机号 " /></p>
+		    </div>
+		    <div class="login_n password ">
+		    	<input class="mima " type="password " placeholder="请填写密码 " />
+		    </div>
+		    <div class="login_n ">
+		    	<input class="rember_mima fl " type="checkbox" value="记住密码 " />
+		    	<span class="fl "> 记住密码</span>
+	            <span class="fr forget "><a href="# ">忘记密码</a></span>
+ 	        </div>
+ 	        <div class="login_but ">
+ 	        	<input class="login_1 " type="button " value="登录 " />
+ 	        </div>
+ 	        <p class="not_hove_account ">还没有账号？快速注册</p>
+	        <div class="other_login ">
+	        	其他登录方式
+	        	<span><a href="# "></a><img src="img/WEIXIN.png "></span>
+	        	<span><a href="# "><img src="img/QQ.png "></a></span>
+	        </div>
+			
+		</div>
+		<!--登录弹出框结束-->    	
+	    <!--注册弹出框开始--> 
+	    <div id="SignIn" class="white_content "><!--弹窗框内容-->
+		    <div style="text-align: right; cursor: default; height: 30px; ">
+			     <span style="font-size: 16px; " onclick="CloseDiv( 'SignIn', 'fade') ">
+			     	<img style=" cursor: pointer; " src="img/close.png ">
+			     </span>
+		    </div>
+		    <h3 class="login_top ">快速注册</h3>
+		    <div class="phone_nub login_country sign_country ">
+		    	<p>
+		    		<select>
+					   <option value ="volvo ">中国</option>
+					   <option value ="volvo ">Volvo</option>
+					   <option value ="volvo ">Volvo</option>
+					   <option value ="saab ">Saab</option>
+					   <option value="opel ">Opel</option>
+					   <option value="audi ">Audi</option>
+				    </select>
+				    <input  class="P_number P_number2 "  type="text " placeholder="请输入您的手机号 " />
+		    	</p>
+		    	
+		    </div>
+		    <div class="login_n Check ">
+		    	<input class="mima check_nub " type="text " placeholder="输入验证码 " />
+		    	<span>获取验证码</span>
+		    </div>
+		    
+		    <div class="login_n password password2 ">
+		    	<input class="mima " type="password " placeholder="填写密码 " />
+		    </div>
+		    <div class="login_n password password2 ">
+		    	<input class="mima mima " type="password " placeholder="确认密码 " />
+		    </div>
+ 	        <div class="login_but ">
+ 	        	<input class="login_1 sign_1 " style="margin: 20px 0px; float: left; " type="button " value="注册 " />
+ 	        </div>
+ 	        <p class="not_hove_account ">已有账号？直接登录</p>
+	    </div>
+	    <!--注册弹出框结束-->
+	    <div id="DZ_mine_content">
+		    <!--左边区域-->
+		    <div id="mine_sideleft">
+		    	<!--我的展示图-->
+		    	<div class="information_of_me">
+		    		<h3 class="My_city">
+		    			法国>巴黎
+		    		</h3>
+		    		<div class="My_div">
+		    		    <img class="my_head_pic" src="img/1254IA.png" />
+		    		    <p class="md1">
+		    		    	<span class="name">流云</span>
+		    		   	    <span class="ename">Cluad</span>
+		    		   	    <span class="renzheng">已认证</span>
+		    		   	    <span class="wrenzheng" onclick="ShowDiv('wrenzheng','fade') ">未认证</span>
+		    		   	    <a href="#">修改个人信息</a>
+		    		    </p>
+		    		    <p class="md2">
+		    		   	  留学生 时尚设计专业
+		    		    </p>
+		    		    <p class="md3">
+		    		   	         我的标签：<br />
+		    		   	    <span >美食达人</span>
+		    		   	    <span >2235</span>
+		    		   	    <span >美食达人</span>
+		    		   	    <span >美250515155</span>
+		    		   	    <span >美食达人</span>
+		    		   	    <span >美2</span>
+		    		   	    <span >美食达人</span>
+		    		   	    <span >美食588</span>
+		    		   	    <a href="#" class="add_more" onclick="ShowDiv('add_more','fade') ">添加更多</a>
+		    		    </p>
+		    		    <p class="gxqm">
+		    		    	<span >个性签名:</span>
+		    		    	世界很大，我很小，小小的我跟这个大家伙死磕
+		    		    	<a href="#" onclick="ShowDiv('GXQM','fade') ">修改个性签名</a>
+		    		    </p>
+		    		</div>
+		    	</div>
+		    	<!--认证出框开始--> 
+				<div id="wrenzheng" class="white_content3 "><!--弹窗框内容-->
+				    <div style="text-align: right; cursor: default; height: 10px; ">
+					     <span style="font-size: 16px; " onclick="CloseDiv( 'wrenzheng', 'fade') ">
+					     	<img style=" cursor: pointer; " src="img/close2.png ">
+					     </span>
+				    </div>
+				    <h3 class="login_top  login_top2">个人认证</h3>
+				    <p class="tc rz_tx">温馨提示<br />请下载手机客户端进行身份验证</p>
+				    <div class="RZM">
+				    	<img class="rzm" src="img/erma.png" />
+				    </div>
+				    <p class="tc rz_tx">扫一扫下载手机APP<br /><span style="color: #18AA60;">游行一族</span></p>    
+				</div>
+				<!--认证弹出框结束-->
+		    	
+				<!--添加标签弹出框开始--> 
+			    <div id="add_more" class="white_content3 "><!--弹窗框内容-->
+				    <div style="text-align: right; cursor: default; height: 10px; ">
+					     <span style="font-size: 16px; " onclick="CloseDiv( 'add_more', 'fade') ">
+					     	<img style=" cursor: pointer; " src="img/close2.png ">
+					     </span>
+				    </div>
+				    <h3 class="login_top  login_top2">我的标签</h3>
+				    <p class="addmd md3">
+				   	    <span >美食达人<img src="img/span_close.png"></span>
+				   	    <span >2235<img src="img/span_close.png"></span>
+				   	    <span >美食达人<img src="img/span_close.png"></span>
+				   	    <span >美<img src="img/span_close.png"></span>
+				   	    <span >美食达人<img src="img/span_close.png"></span>
+				   	    <span >美2<img src="img/span_close.png"></span>
+				   	    <span >美食达人<img src="img/span_close.png"></span>
+				   	    <span >美2<img src="img/span_close.png"></span>
+				   	    <span >美食达人<img src="img/span_close.png"></span>
+				    </p>
+				    <div class="bq_shop">
+				    	<a class="hyh" href="#">换一批</a>
+				    	15161
+				    	
+				    </div>
+				    <div class="sr_gxqm">
+				    	<input class="sr_gxqm_text" type="text" value="输入你的个性签名" />
+				    	<input class="sr_gxqm_but"  type="button" value="确定" />
+				    </div>
+				    <div  class="BG">
+				        <input type="button" value="保存标签修改" class="bc_bqxg" />
+				    </div>   
+			    </div>
+			    <!--添加标签弹出框结束-->
+			    <!--个性签名开始-->
+			    <div id="GXQM" class="white_content3 "><!--弹窗框内容-->
+				    <div style="text-align: right; cursor: default; height: 10px; ">
+					     <span style="font-size: 16px; " onclick="CloseDiv( 'GXQM', 'fade') ">
+					     	<img style=" cursor: pointer; " src="img/close2.png ">
+					     </span>
+				    </div>
+				    <h3 class="login_top  login_top2">修改个性签名</h3>
+				    <textarea class="bq_shop " placeholder="请输入您的专属个性签名，体现您性格，炫酷牛逼叼炸天，
+		让我们更好的了解你吧!" ></textarea>
+				    <div  class="BG">
+				        <input type="button" value="保存签名" class="bc_bqxg" />
+				    </div>   
+			    </div>
+	            <!--个性签名弹出框结束-->
+		    	
+		    </div>
+		    <!--左边区域结束-->
+		    <div class="mine_sideright3">
+		    	<a href="#"><img src="img/shenqingduizhang.png" /></a>
+		    </div>
+		</div>
+		<!--主要内容1结束-->
+		<div id="DZ_mine_content">
+			<nav>
+				<a href="tourist_center.html">我的订单</a>
+				<a class="on" href="tourist_center2.html">我的收藏</a>
+				<a href="#">我的游行队长</a>
+			</nav>
+			<!--我的收藏-->
+			<div class="DingDan ">
+				<div class=" dd_con2 fl">
+					<img src="img/oba.png" />
+					<div class="dd_con2_sl">
+						<img src="img/faguo.png" />
+						<ul>
+						    <li>法国巴黎</li>
+						    <li>宋仲基</li>
+						    <li>巴黎大学人文系在读研究生</li>
+					    </ul>
+					    <ul class="md3 md4">
+		    		   	    <span >帅哥</span>
+		    		   	    <span >王子</span>
+		    		   	    <span >美食达人</span>
+		    		   	    <span >美250515155</span>
+		    		   	    <span >美食达人</span>
+		    		   	    <span >美2</span>
+		    		   	    <span >美食达人</span>
+		    		   	    <span >美食588</span>
+		    		    </ul>
+		    		    
+					</div>
+					<div>
+					      <p>我长的很帅，我希望与你共同游览这个美丽的世界</p>	
+					</div>
+					
+				</div>
+				<div class="dd_pj2 fr">
+					<h3>费用说明</h3>
+					<ul>
+						<li><span class="fl">徒步向导</span><span class="fr">400元/天</span></li>
+						<li><span class="fl">接送机</span><span class="fr">230元/次</span></li>
+						<li><span class="fl">带五座车</span><span class="fr">750元/天</span></li>
+						<li><span class="fl">带七座车向导</span><span class="fr">950元/天</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	    <div class="footer ">
+    		<div class="footer_content ">
+    			<h3>热门目的地</h3>
+    			<p>
+    				<a href="# ">美国</a>
+    				<a href="# ">加拿大</a>
+    				<a href="# ">荷兰</a>
+    				<a href="# ">英格兰</a>
+    				<a href="# ">希腊</a>
+    				<a href="# ">德国</a>
+    				<a href="# ">匈牙利</a>
+    				<a href="# ">瑞士</a>
+    				<a href="# ">法国</a>
+    				<a href="# ">意大利</a>
+    				<a href="# ">比利时</a>
+    				<a href="# ">葡萄牙</a>
+    				<a href="# ">丹麦</a>
+    				<a href="# ">瑞典</a>
+    				<a href="# ">芬兰</a>
+    				<a href="# ">冰岛</a>
+    				<a href="# ">土耳其</a>
+    				<a href="# ">捷克</a>
+    				<a href="# ">西班牙</a>
+    				<a href="# ">奥地利</a>
+    				<a href="# ">澳大利亚</a>
+    				<a href="# ">新西兰</a>
+    				<a href="# ">日本</a>
+    				<a href="# ">新加坡</a>
+    				<a href="# ">中国香港</a>
+    				<a href="# ">不丹</a>
+    				<a href="# ">沙巴</a>
+    				<a href="# ">阿联酋</a>
+    				<a href="# ">斐济群岛</a>
+    				<a href="# ">夏威夷</a>
+    				<a href="# ">塞舌尔</a>
+    				<a href="# ">苏梅岛</a>
+    				<a href="# ">毛里求斯</a>
+    				<a href="# ">巴厘岛</a>
+    				<a href="# ">塞班岛</a>
+    				<a href="# ">大溪地</a>
+    			</p>
+    			<dl>
+    				<a href="# ">友情链接</a>
+    				<a href="# ">签证办理</a>
+    				<a href="# ">票务预订</a>
+    				<a href="# ">人气向导</a>
+    				<a href="# ">精品路线</a>
+    				<a href="# ">推荐目的地</a>
+    				<a href="# ">会员中心</a>
+    			</dl>
+    			<h4>游行一族</h4>
+    			<h5>豫ICP11511532号-3<br>
+    			    Copyright © 2015-2016 YXYZ.All RIght Reserved.
+    			</h5>
+    			
+    		</div>
+    	   	
+    	</div>
+	</body>
+</html>
+<script>
+	// 我的标签弹出框点击事件	
+	$(".md3.addmd > span > img").on({
+		click: function (){
+			$(this).parent().css({
+				display:"none"
+			});
+//			console.log("hehe");
+		}
+	})
+</script>

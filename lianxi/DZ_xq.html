@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>队长详情</title>
+		<link rel="stylesheet" href="css/mine.css" />
+		<script src="js/j.js" type="text/javascript "></script>
+	</head>
+	<body>
+		<div class="banner_top Top">
+			<span class="fl bt_l "> 
+    				<img class="bt_logo " src="img/logo2.png ">
+    				<input type="text " placeholder="想去哪里呢？ " />
+    				<span class="but ">搜索</span>
+    		</span>
+			<span class="fr bt_r ">
+			<a id="Button1" onclick="ShowDiv('Login','fade') ">登录</a>
+			<a id="Button2" onclick="ShowDiv('SignIn','fade') ">注册</a>
+			<a href="# ">下载App</a>
+			<a class="pc " href="# ">个人中心</a></span>
+    	</div>
+    	<!--登陆弹出框开始-->
+		<div id="fade" class="black_overlay">
+		</div>
+		<div id="Login" class="white_content">
+			<div style="text-align: right; cursor: default; height: 30px; ">
+			     <span style="font-size: 16px; " onclick="CloseDiv( 'Login', 'fade') ">
+			     	<img style=" cursor: pointer; " src="img/close.png ">
+			     </span>
+		    </div>
+		    <h3 class="login_top ">游行一族</h3>
+		    <div class="login_country ">
+		    	<p>国家地区<select>
+		    		           <option value ="volvo ">中国</option>
+							   <option value ="volvo ">Volvo</option>
+							   <option value ="volvo ">Volvo</option>
+							   <option value ="saab ">Saab</option>
+							   <option value="opel ">Opel</option>
+							   <option value="audi ">Audi</option>
+				           </select>
+		        </p>
+		    </div>
+		    <div class="phone_nub ">
+		    	<p>+86<input  class="P_number "  type="text " placeholder="请输入您的手机号 " /></p>
+		    </div>
+		    <div class="login_n password ">
+		    	<input class="mima " type="password " placeholder="请填写密码 " />
+		    </div>
+		    <div class="login_n ">
+		    	<input class="rember_mima fl " type="checkbox" value="记住密码 " />
+		    	<span class="fl "> 记住密码</span>
+	            <span class="fr forget "><a href="# ">忘记密码</a></span>
+ 	        </div>
+ 	        <div class="login_but ">
+ 	        	<input class="login_1 " type="button " value="登录 " />
+ 	        </div>
+ 	        <p class="not_hove_account ">还没有账号？快速注册</p>
+	        <div class="other_login ">
+	        	其他登录方式
+	        	<span><a href="# "></a><img src="img/WEIXIN.png "></span>
+	        	<span><a href="# "><img src="img/QQ.png "></a></span>
+	        </div>
+			
+		</div>
+		<!--登录弹出框结束-->    	
+	    <!--注册弹出框开始--> 
+	    <div id="SignIn" class="white_content "><!--弹窗框内容-->
+		    <div style="text-align: right; cursor: default; height: 30px; ">
+			     <span style="font-size: 16px; " onclick="CloseDiv( 'SignIn', 'fade') ">
+			     	<img style=" cursor: pointer; " src="img/close.png ">
+			     </span>
+		    </div>
+		    <h3 class="login_top ">快速注册</h3>
+		    <div class="phone_nub login_country sign_country ">
+		    	<p>
+		    		<select>
+					   <option value ="volvo ">中国</option>
+					   <option value ="volvo ">Volvo</option>
+					   <option value ="volvo ">Volvo</option>
+					   <option value ="saab ">Saab</option>
+					   <option value="opel ">Opel</option>
+					   <option value="audi ">Audi</option>
+				    </select>
+				    <input  class="P_number P_number2 "  type="text " placeholder="请输入您的手机号 " />
+		    	</p>
+		    	
+		    </div>
+		    <div class="login_n Check ">
+		    	<input class="mima check_nub " type="text " placeholder="输入验证码 " />
+		    	<span>获取验证码</span>
+		    </div>
+		    
+		    <div class="login_n password password2 ">
+		    	<input class="mima " type="password " placeholder="填写密码 " />
+		    </div>
+		    <div class="login_n password password2 ">
+		    	<input class="mima mima " type="password " placeholder="确认密码 " />
+		    </div>
+ 	        <div class="login_but ">
+ 	        	<input class="login_1 sign_1 " style="margin: 20px 0px; float: left; " type="button " value="注册 " />
+ 	        </div>
+ 	        <p class="not_hove_account ">已有账号？直接登录</p>
+	    </div>
+	    <!--注册弹出框结束-->
+	    
+	    <!--开始队长详情主要内容-->
+	    <div id="DZ_mine_content">
+	    	<!--右边区域开始-->
+	    	<div id="mine_sideright" class="mine_sideright">
+	    		<div class="right_top">
+	    		    <img class="My_yz_p" src="img/mingpian.png" />
+	    		    <div class="name">郭平</div>
+	    		    <div class="right_top_bottom">
+	    		    	<ul>
+	    		    	    <li id="Button3" onclick="ShowDiv('Mycost','fade2')">费用说明</li>
+	    		    	    <li id="Button4" onclick="ShowDiv('Arrange','fade2')">日程安排</li>
+	    		    	</ul>
+	    		    </div>
+	    		</div>
+	    		<div class="right_bottom">
+	    		   <img  class="saoma" src="img/erma.png">
+	    		   <img class="saoma2" src="img/saoma2.png" />
+	    		</div>
+	    	</div>
+	  
+		<!--********************************费用弹出层*************************************-->
+		<div id="fade2" class="black_overlay2">
+		</div>
+		<div id="Mycost" class="white_content2">
+			<div style="text-align: right; cursor: default; height: 40px;">
+				<span style="font-size: 16px;" onclick="CloseDiv('Mycost','fade2')">
+					<img style=" cursor: pointer; " src="img/close2.png ">
+			    </span>
+			</div>
+			<div class="Cost_con">
+				<h1 class="tc">费用说明</h1>
+				<h3 class="tip tip2"><span></span>徒步队长</h3>
+				<li class="cost_xxnr">
+					徒步陪同旅客旅行，介绍沿途自然风光，帮助客人规划行程
+					<span>400元/天</span>
+				</li>
+				<h3 class="tip tip2"><span></span>带车队长</h3>
+				<li class="cost_xxnr">
+					带五坐车陪同游玩
+					<span>1000元/天</span>
+				</li>
+				<li class="cost_xxnr">
+					带七座车陪同游玩
+					<span>1600元/天</span>
+				</li>
+				<h3 class="tip tip2"><span></span>玩法类</h3>
+				<li class="cost_xxnr">
+					短途玩法<br />介绍
+				</li>
+				<li class="cost_xxnr">
+					长线玩法<br />介绍
+				</li>
+				
+				<h3 class="tip tip2"><span></span>费用说明</h3>
+				<li>
+					<p>徒步向导 :</p>
+每天包含的服务时间为9小时（含1小时用餐），不满9小时按9小时计算，服务时间自约定的见面时间开始计算，超出时间需要另外计费支付；该费用不包含队长因陪同而产生的交通费、餐费和门票等其他费用。
+				</li>
+				<li>
+					<p>徒步向导 :</p>
+每天包含的服务时间为9小时（含1小时用餐），不满9小时按9小时计算，服务时间自约定的见面时间开始计算，超出时间需要另外计费支付；该费用不包含队长因陪同而产生的交通费、餐费和门票等其他费用。</li>
+                 <li>
+                 	<p></p>接送机服务：</p>
+每次接送机包含的服务时间为4小时（含航班延误等待时间），服务时间自约定的接机时间开始计算，超出时间需要另外计费支付；费用不含向导徒步接送机时产生的交通费和向导带车接送机时产生的停车费、路桥费等其他费用。若航班延误，旅行者应及时联系队长说明情况自行沟通确认队长是否可以将接机服务时间顺延；如未及时与队长沟通说明情况或队长无法调整接机安排时间，超出的服务时间将收取加班费；距离约定接送服务超过4小时，且队长联系不上用户的情况下，默认旅行者已经结束本次服务。
+                 </li>
+                 <li>
+                 	<p>关于儿童的费用：</p>
+关于儿童出行，小于12岁的儿童应在预定前跟队长说明，以便队长做适当的安排。。
+                 </li>
+                 <h3 class="tip tip2"><span></span>退款说明</h3>
+                 <li>距离约定的日期还有10天<span>100%</span>				</li>
+                 <li>距离约定的日期还有7天<span>50%</span>				</li>
+                 <li>距离约定的日期还有3天<span>0%</span>				</li>
+                 <div style="height: 51px; width: 100%; float: left;" ></div>
+			</div>
+		</div>
+		<!--********************************安排弹出层*************************************-->
+		<div id="Arrange" class="white_content2">
+			<div style="text-align: right; cursor: default; height: 40px;">
+				<span style="font-size: 16px;" onclick="CloseDiv('Arrange','fade2')">
+					<img style=" cursor: pointer; " src="img/close2.png ">
+			    </span>
+			</div>
+			22222
+		</div>
+		
+		
+	    	<!--右边区域结束-->
+	    	<!--左边区域-->
+		    <div id="mine_sideleft">
+		    	<!--我的展示图-->
+		    	<div class="My_banner">
+		    		<img class="My_img_banner" src="img/DZ_1.png" />
+		    		<div class="ab_left_top">
+		    			评价<br>
+		    			<a>16</a>
+		    		</div>
+		    		<div class="My_biaoqin">
+		    			<div>
+			    			<a>资深吃货</a>
+			    			<a>时尚玩家</a>
+			    			<a>游戏达人</a>
+			    			<a>驴友</a>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<!--我的展示图结束-->
+		    	<!--My_nav开始-->
+		    	<div class="My_nav">
+		    	    <ul>
+			    		<li class="on">我的视频</li>
+			    		<li>自我简介</li>
+			    		<li>自我评价</li>
+			    		<li>我的相册</li>
+			    		<li>详细资料</li>
+		    		</ul>
+		    	</div>
+		    	<!--我的视频-->
+		    	<h2 class="tip"><span></span>我的视频</h2>
+		    	<div id="My_vido">
+		    		<embed type="application/x-shockwave-flash"  class="My_vido" src="http://static.youku.com/v1.0.0478/v/swf/loader.swf?VideoIDS=XODEzMDc4MDMy&isAutoPlay=true&isShowRelatedVideo=false&embedid=-&showAd=0"/>
+		    	</div>
+		    	<h2 class="tip"><span></span>自我简介</h2>
+		    	<div class="My_article">
+		    		<h2 class="tc">从小有个梦想</h2>
+		    		<p>法兰西共和国（法语：République française，英语：the French Republic），
+		    			简称法国，是一个本土位于西欧的总统共和制国家，
+		    			海外领土包括南美洲和南太平洋的一些地区。
+		    			该国为欧洲国土面积第三大、东与比利时、卢森堡、德国、瑞士、意大利接壤，南与西班牙、
+		    			安道尔、摩纳哥接壤。</p>
+		    			<img src="img/asf111.png" />
+		    		<p>	本土地势东南高西北低，大致呈六边形，
+		    			三面临水，南临地中海，西濒大西洋，西北隔英吉利海峡与英国相望
+		    			，科西嘉岛是法国最大岛屿。</p>
+		    			<img src="img/1254IA.png" />
+		    		<p>	法国从中世纪末期开始成为欧洲大国之一，国力于19-20世纪时达到巅峰，建立了当时世界第二大殖民帝国，亦为20世纪人口最稠密的国家。在漫长的历史中，该国培养了不少对人类发展影响深远的著名文学家和思想家，此外还具有全球第四多的世界遗产。
+		    		</p>
+		    	</div>
+		   
+		    	<h2 class="tip"><span></span>我的评价</h2>
+		    	<div class="My_appraise">
+		    		 <div class="zhpf">
+		    		 	综合评分<img src="img/pingfen.png">
+		    		 	<a>5.0</a>
+		    		 </div>
+		    		 <div class="tourist">
+		    		 	<div class="tourist_list">
+		    		 		<img class="tourist_head_pic" src="img/1254IA.png">
+		    		 		<div class="tourist_message">
+		    		 			<p class="p1">草木子</p>
+		    		 			<p class="p2">2015.07.04</p>
+		    		 			<p class="p3">
+		    		 				<img src="img/pingfen.png">
+		    		 	            <a>5.0</a>
+		    		 		   </p>
+		    		 		</div>
+		    		 		<div class="pinglun">
+		    		 			<span></span>
+		    		 			郭萍妹子妹子的服务特别周到，第一天接机一路帮我们提行李，并且很贴心的给我们
+                                                          选择我们需要的酒店，一路上也在陪孩子玩，敬业有童心，给我们一家留下一个非常
+                                                          有意义的假期，棒棒哒！
+		    		 		</div>
+		    		 	</div>
+		    		 	<div class="tourist_list">
+		    		 		<img class="tourist_head_pic" src="img/1254IA.png">
+		    		 		<div class="tourist_message">
+		    		 			<p class="p1">草木子</p>
+		    		 			<p class="p2">2015.07.04</p>
+		    		 			<p class="p3">
+		    		 				<img src="img/pingfen.png">
+		    		 	            <a>5.0</a>
+		    		 		   </p>
+		    		 		</div>
+		    		 		<div class="pinglun">
+		    		 			<span></span>
+		    		 			郭萍妹子妹子的服务特别周到，第一天接机一路帮我们提行李，并且很贴心的给我们
+                                                          选择我们需要的酒店，一路上也在陪孩子玩，敬业有童心，给我们一家留下一个非常
+                                                          有意义的假期，棒棒哒！
+		    		 		</div>
+		    		 	</div>
+		    		 	<span class="more3">
+		    		 		<a>查看更多</a>
+		    		 	</span>
+		    		 	
+		    		 </div>
+		    	</div>
+		    	<h2 class="tip"><span></span>我的相册</h2>
+		    	<div class="My_pic">
+		    		<ul class="my_self_pic fl">
+		    			<img src="img/myself_pic_f.png">
+		    		    <p>我的照片<span>5</span></p>
+		    		</ul>
+		    		
+		    		<ul class="my_self_pic fl">
+		    			<img src="img/car.png">
+		    		    <p>我的照片<span>5</span></p>
+		    		</ul>
+		    		
+		    		<ul class="my_self_pic fl">
+		    			<img src="img/wemen.png">
+		    		    <p>我的照片<span>5</span></p>
+		    		</ul>
+		    		
+		    		<ul class="my_self_pic fl">
+		    			<img src="img/fengjingok.png">
+		    		    <p>我的照片<span>5</span></p>
+		    		</ul>
+		    		
+		    	</div>
+		    </div>
+		    <!--左边区域结束-->
+	    </div>
+	    <!--主要内容结束-->
+ 	    <div class="footer ">
+    		<div class="footer_content ">
+    			<h3>热门目的地</h3>
+    			<p>
+    				<a href="# ">美国</a>
+    				<a href="# ">加拿大</a>
+    				<a href="# ">荷兰</a>
+    				<a href="# ">英格兰</a>
+    				<a href="# ">希腊</a>
+    				<a href="# ">德国</a>
+    				<a href="# ">匈牙利</a>
+    				<a href="# ">瑞士</a>
+    				<a href="# ">法国</a>
+    				<a href="# ">意大利</a>
+    				<a href="# ">比利时</a>
+    				<a href="# ">葡萄牙</a>
+    				<a href="# ">丹麦</a>
+    				<a href="# ">瑞典</a>
+    				<a href="# ">芬兰</a>
+    				<a href="# ">冰岛</a>
+    				<a href="# ">土耳其</a>
+    				<a href="# ">捷克</a>
+    				<a href="# ">西班牙</a>
+    				<a href="# ">奥地利</a>
+    				<a href="# ">澳大利亚</a>
+    				<a href="# ">新西兰</a>
+    				<a href="# ">日本</a>
+    				<a href="# ">新加坡</a>
+    				<a href="# ">中国香港</a>
+    				<a href="# ">不丹</a>
+    				<a href="# ">沙巴</a>
+    				<a href="# ">阿联酋</a>
+    				<a href="# ">斐济群岛</a>
+    				<a href="# ">夏威夷</a>
+    				<a href="# ">塞舌尔</a>
+    				<a href="# ">苏梅岛</a>
+    				<a href="# ">毛里求斯</a>
+    				<a href="# ">巴厘岛</a>
+    				<a href="# ">塞班岛</a>
+    				<a href="# ">大溪地</a>
+    			</p>
+    			<dl>
+    				<a href="# ">友情链接</a>
+    				<a href="# ">签证办理</a>
+    				<a href="# ">票务预订</a>
+    				<a href="# ">人气向导</a>
+    				<a href="# ">精品路线</a>
+    				<a href="# ">推荐目的地</a>
+    				<a href="# ">会员中心</a>
+    			</dl>
+    			<h4>游行一族</h4>
+    			<h5>豫ICP11511532号-3<br>
+    			    Copyright © 2015-2016 YXYZ.All RIght Reserved.
+    			</h5>
+    			
+    		</div>
+    	   	
+    	</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/mine_js.js"" ></script>
+<script>
+    /*Personal_center DZ_xq右侧固定*/
+    var aa = document.getElementsByClassName('mine_sideright')[0];
+	window.onscroll = function(){
+				 fixed();
+		}	
+	var lh = $('#mine_sideleft').height();
+	//alert( lh );
+	function fixed() {
+			// 监听浏览器页面滚动过的距离;
+			var scrollH = document.body.scrollTop;
+		if (scrollH > lh ){
+			    aa.style.position = "relative";
+				aa.style.float='right';
+				aa.style.marginLeft="0";
+				aa.style.top= lh + 'px';
+				aa.style.left=15+ 'px';
+				
+		    }else{
+				aa.style.position = "fixed";
+				aa.style.marginLeft= 180 + 'px';
+				aa.style.top= 50+ 'px';
+				aa.style.left= 50+ '%';
+			}
+	}
+</script>

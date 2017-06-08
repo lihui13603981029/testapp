@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>游行一族-首页</title>
+		
+		<link rel="stylesheet" href="css/mine.css" />
+		<link rel="stylesheet" href="css/swiper.css">
+		<!-- Swiper JS -->
+		<script src="js/swiper.min.js"></script>
+		<script src="js/j.js"></script>
+		<script src="js/jquery_lazyload-1.9.5/jquery.lazyload.min.js"></script>
+		<script type="text/javascript ">
+	        /*返回顶部*/
+			function b() {
+				h = $(window).height(),
+				t = $(document).scrollTop(),
+				t > h ? $("#moquu_top").show() : $("#moquu_top").hide()
+			}
+			$(document).ready(function() {
+				b(),
+				$("#moquu_top").click(function() {
+					$(document).scrollTop(0)
+				})
+			}),
+			$(window).scroll(function() {
+				b()
+			});
+			//弹出隐藏层
+			function ShowDiv(show_div, bg_div) {
+				document.getElementById(show_div).style.display = 'block';
+				document.getElementById(bg_div).style.display = 'block';
+				var bgdiv = document.getElementById(bg_div);
+				bgdiv.style.width = document.body.scrollWidth;
+				// bgdiv.style.height = $(document).height();
+				$("# " + bg_div).height($(document).height());
+			};
+			//关闭弹出层
+			function CloseDiv(show_div, bg_div) {
+				document.getElementById(show_div).style.display = 'none';
+				document.getElementById(bg_div).style.display = 'none';
+			};
+       </script>
+		
+
+	</head>
+	<body>
+		<!--右侧悬浮窗口-->
+		<div id="moquu_wxin" class="moquu_wxin">
+			<a href="javascript:void(0)">
+				<div class="moquu_wxinh">
+					
+				</div>
+			</a>
+		</div>
+		<div id="moquu_wshare" class="moquu_wshare">
+			<a href="javascript:void(0)">
+				
+			</a>
+		</div>
+		<a id="moquu_top" href="javascript:void(0)" style="display: block;"></a>
+		<!-- 悬浮框代码 结束 -->
+		<!--banner部分-->
+	    <div class="banner">
+	    	<div class="banner_top">
+	    			<span class="fl bt_l"> <img class="bt_logo" src="img/logo2.png"></span>
+	    			<span class="fr bt_r ">
+    				<a id="Button1" onclick="ShowDiv('Login','fade') ">登录</a>
+    				<a id="Button2" onclick="ShowDiv('SignIn','fade') ">注册</a>
+    				<a href="# ">下载App</a>
+    				<a class="pc " href="# ">个人中心</a></span>
+    	    </div>
+    	    <!--登陆弹出框开始-->
+		<div id="fade" class="black_overlay">
+		</div>
+		<div id="Login" class="white_content">
+			<div style="text-align: right; cursor: default; height: 30px; ">
+			     <span style="font-size: 16px; " onclick="CloseDiv( 'Login', 'fade') ">
+			     	<img style=" cursor: pointer; " src="img/close.png ">
+			     </span>
+		    </div>
+		    <h3 class="login_top ">游行一族</h3>
+		    <div class="login_country login_country2 ">
+		    	<p>国家地区<select>
+		    		           <option value ="volvo ">中国</option>
+							   <option value ="volvo ">Volvo</option>
+							   <option value ="volvo ">Volvo</option>
+							   <option value ="saab ">Saab</option>
+							   <option value="opel ">Opel</option>
+							   <option value="audi ">Audi</option>
+				           </select>
+		        </p>
+		    </div>
+		    <div class="phone_nub ">
+		    	<p>+86<input  class="P_number "  type="text " placeholder="请输入您的手机号 " /></p>
+		    </div>
+		    <div class="login_n password ">
+		    	<input class="mima " type="password " placeholder="请填写密码 " />
+		    </div>
+		    <div class="login_n ">
+		    	<input class="rember_mima fl " type="checkbox" />
+		    	<span class="fl "> 记住密码</span>
+	            <span class="fr forget "><a href="# ">忘记密码</a></span>
+ 	        </div>
+ 	        <div class="login_but ">
+ 	        	<input class="login_1 " type="button " value="登录 " />
+ 	        </div>
+ 	        <p class="not_hove_account ">还没有账号？快速注册</p>
+	        <div class="other_login ">
+	        	其他登录方式
+	        	<span><a href="# "></a><img src="img/WEIXIN.png "></span>
+	        	<span><a href="# "><img src="img/QQ.png "></a></span>
+	        </div>
+			
+		</div>
+		<!--登录弹出框结束-->    	
+	    <!--注册弹出框开始--> 
+	    <div id="SignIn" class="white_content "><!--弹窗框内容-->
+		    <div style="text-align: right; cursor: default; height: 30px; ">
+			     <span style="font-size: 16px; " onclick="CloseDiv( 'SignIn', 'fade') ">
+			     	<img style=" cursor: pointer; " src="img/close.png ">
+			     </span>
+		    </div>
+		    <h3 class="login_top ">快速注册</h3>
+		    <div class="phone_nub login_country sign_country ">
+		    	<p>
+		    		<select>
+					   <option value ="volvo ">中国</option>
+					   <option value ="volvo ">Volvo</option>
+					   <option value ="volvo ">Volvo</option>
+					   <option value ="saab ">Saab</option>
+					   <option value="opel ">Opel</option>
+					   <option value="audi ">Audi</option>
+				    </select>
+				    <input  class="P_number P_number2 "  type="text " placeholder="请输入您的手机号 " />
+		    	</p>
+		    	
+		    </div>
+		    <div class="login_n Check ">
+		    	<input class="mima check_nub " type="text " placeholder="输入验证码 " />
+		    	<span>获取验证码</span>
+		    </div>
+		    
+		    <div class="login_n password password2 ">
+		    	<input class="mima " type="password " placeholder="填写密码 " />
+		    </div>
+		    <div class="login_n password password2 ">
+		    	<input class="mima mima " type="password " placeholder="确认密码 " />
+		    </div>
+ 	        <div class="login_but ">
+ 	        	<input class="login_1 sign_1 " style="margin: 20px 0px; float: left; " type="button " value="注册 " />
+ 	        </div>
+ 	        <p class="not_hove_account ">已有账号？直接登录</p>
+	    </div>
+	    <!--注册弹出框结束-->
+	    	 <!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide"><img class="banner_img" src="img/banner.png"></div>
+		            <div class="swiper-slide"><img class="banner_img" src="img/banner3.png"></div>
+		            <div class="swiper-slide"><img class="banner_img" src="img/banner3.png"></div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination" style=" width:15%; left:90%; bottom:7rem; 	z-index: 100; "></div>
+		        <!-- Add Arrows -->
+		        <!--<div class="swiper-button-next"></div>
+		        <div class="swiper-button-prev"></div>-->
+		    </div>
+		    <!-- Initialize Swiper -->
+		    <script>
+		    var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev',
+		        paginationClickable: true,
+		        spaceBetween: 30,
+		        centeredSlides: true,
+		        autoplay: 5000,
+		        autoplayDisableOnInteraction: false
+		    });
+		    </script>
+		    
+		    <div class="sousuo">
+		        <div class="s_c">
+		        	<input type="text" class="s_ck" placeholder="请输入你想去的国家或者城市">
+		            <input type="button" class="fr s_but" />
+		        </div> 
+		    </div>
+		    
+		    <div class="banner_bottom">
+		    	<div class="bb_c">
+			    	<a href="#"><img src="img/bb_1.png"/></a>
+			    	<a href="#"><img src="img/bb_2.png"/></a>
+			    	<a href="#"><img src="img/bb_3.png"/></a>
+		    	</div>
+		    </div>
+	    </div>
+	    <!--banner部分结束-->
+        <!--开始主要内容区域-->
+        <div id="conten">
+        	<!--推荐国家-->
+        	<div class="con_diqu">
+	       	    <div class="con_title">
+	       	    	<h1>地区~推荐</h1>
+	       	    	<p>在这里，我们探索世界</p>
+	       	    </div>
+	       	    
+	       	    <a href="#" class="cou cou_img1">
+	       	    	<span class="cou_name">日本</span>
+	       	    	<span class="cou_ename">Japan</span>
+	       	    	<img class="lazy" data-original="img/001.png"></a>	
+	       	    <a href="#" class="cou">
+	       	    	<span class="cou_name">日本</span>
+	       	    	<span class="cou_ename">Japan</span>
+	       	    	<img class="lazy" data-original="img/l1.png"  ></a>
+	       	    	
+	       	    <a href="#" class=" cou">
+	       	    	<span class="cou_name">日本</span>
+	       	    	<span class="cou_ename">Japan</span>	       	    	
+	       	    	<img class="lazy" data-original="img/l1.png"  ></a>
+
+	       	    <a href="#" class="lazy cou">
+	       	    	<span class="cou_name">日本</span>
+	       	    	<span class="cou_ename">Japan</span>	       	    		       	    	
+	       	    	<img class="lazy" data-original="img/l1.png"  ></a>
+	       	    <div class="more fl">
+	       	    	<span>查看更多</span>
+	       	    </div>
+	        </div>
+	       <!-- /*推荐队长*/-->
+	        <div class="con_dz">
+	        	<div class="con_title">
+	       	    	<h1>达人向导</h1>
+	       	    	<p>让当地人带你感受当地人的生活</p>
+	       	    </div>
+	       	    <a href="#" class=" dz dzl  " >
+	       	    	<img class="dz_big lazy" data-original="img/l1.png">
+	       	    	<img class="dz_head" src="img/l1.png">
+	       	    	<div class="dz_top">
+	       	    		<span class="country_name fl">此处国家名称</span>
+	       	    		<span class="cou_qi fr"><img src="img/qi.png"</span>
+	       	    	</div>
+	       	    	<div class="dz_text">
+	       	    		<p class="dz_name">李向阳 <span class="dz_job">导游</span></p>
+	       	    		<span class="dz_ms">1、私人定制12条旅游线路</span>
+	       	    		<span class="dz_ms">2、从事向导行业8年</span>
+	       	    	</div>
+	       	    </a>
+	       	    <a href="#" class=" dz dzm" >
+	       	    	<img class="dz_big lazy" data-original="img/l1.png">
+	       	    	<img class="dz_head" src="img/l1.png">
+	       	    	<div class="dz_top">
+	       	    		<span class="country_name fl">此处国家名称</span>
+	       	    		<span class="cou_qi fr"><img src="img/qi.png"</span>
+	       	    	</div>
+	       	    	<div class="dz_text">
+	       	    		<p class="dz_name">李向阳 <span class="dz_job">导游</span></p>
+	       	    		<span class="dz_ms">1、私人定制12条旅游线路</span>
+	       	    		<span class="dz_ms">2、从事向导行业8年</span>
+	       	    	</div>
+	       	    </a>
+	       	    <a href="#" class=" dz dzr  " >
+	       	    	<img class="dz_big lazy" data-original="img/l1.png">
+	       	    	<img class="dz_head" src="img/l1.png">
+	       	    	<div class="dz_top">
+	       	    		<span class="country_name fl">此处国家名称</span>
+	       	    		<span class="cou_qi fr"><img src="img/qi.png"</span>
+	       	    	</div>
+	       	    	<div class="dz_text">
+	       	    		<p class="dz_name">李向阳 <span class="dz_job">导游</span></p>
+	       	    		<span class="dz_ms">1、私人定制12条旅游线路</span>
+	       	    		<span class="dz_ms">2、从事向导行业8年</span>
+	       	    	</div>
+	       	    </a>
+	       	    <div class="more fl">
+	       	    	<span>查看更多</span>
+	       	    </div>
+	       	</div>
+       	    <!--出行机器猫-->
+       	    <div class="con_cx">
+		    	<div class="con_title">
+		   	    	<h1>出行机器猫</h1>
+		   	    	<p>帮你解决一切出行难题</p>
+		   	    </div>	       	    	
+       	    	<div class="cx fl">
+       	    		<img class="lazy" data-original="img/catl.png" />
+       	    		<div class="state1">
+       	    		    <img class="state1_img lazy" data-original="img/cat1.png">
+       	    		</div>
+       	    		<div class="state2">
+       	    		    <img class="yhui lazy" data-original="img/cato.png">
+       	    		    <a class="visa" href="#"></a>
+       	    		    <a class="others"href="#"></a>
+       	    		</div>
+       	    	</div>
+       	    	<div class="cx fl">
+       	    		<img class="lazy" data-original="img/catm.png" />
+       	    		<div class="state1">
+       	    		    <img class="state1_img lazy" data-original="img/cat2.png">
+       	    		</div>
+       	    		<div class="state2">
+       	    		    <img class="yhui lazy" data-original="img/cato.png">
+       	    		    <a class="food" href="#"></a>
+       	    		    <a class="nature" href="#"></a>
+       	    		    <a class="other"href="#"></a>
+       	    		</div>
+       	    	</div>
+       	    	<div class="cx fl">
+       	    		<img class="lazy" data-original="img/catr.png" />
+       	    		<div class="state1">
+       	    		    <img class="state1_img lazy" data-original="img/cat3.png">
+       	    		</div>
+       	    		<div class="state2">
+       	    		    <img class="yhui lazy" data-original="img/cato.png">
+       	    		    <a class="xs" href="#"></a>
+       	    		    <a class="gr"href="#"></a>
+       	    		    <a class="lx" href="#"></a>
+       	    		    <a class="pj"href="#"></a>
+       	    		</div>
+       	    	</div>
+       	    </div>
+	    </div>
+	    <!--主要内容区域结束-->
+	    <!--底部区域-->
+	    <div class="footer">
+	    	<div class="f_content">
+				<ul class=" f_con f_con1">
+					<p>公司信息</p>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">公司新闻</a></li>
+					<li><a href="#">免责条款</a></li>
+					<li><a href="#">联系我们</a></li>
+					
+				</ul>
+				<ul class="f_con f_con2">
+					<p>使用帮助</p>
+					<li><a href="#">新手上路</a></li>
+					<li><a href="#">账户信息</a></li>
+					<li><a href="#">个人资料</a></li>
+					<li><a href="#">订单及评价</a></li>
+					<li><a href="#">信任与安全</a></li>
+					<li><a href="#">注意事项</a></li>
+					<li><a href="#">联系客服</a></li>
+					<li><a href="#">用户须知</a></li>
+					<li><a href="#">服务标准</a></li>
+				</ul>
+			    <ul class="f_con f_con3">
+			    	<p>联系电话</p>
+					<li><a href="#">国内：400-397-9926</a></li>
+					<li><a href="#">国外：86-155-3724-9654</a></li>
+			    	
+			    </ul>
+			    <ul class="f_con f_con4">
+			    	<p>关注我们</p>
+					<img src="img/erma.png">
+					<li>扫一扫，加入我们</li>
+			    	
+			    </ul>
+	        </div>
+	    </div>
+	</body>
+</html>
+<script type="text/javascript" src="js/mine_js.js" ></script>
+<script type="text/javascript">
+//图片懒加载
+$(function() {
+				//$("img.lazy").lazyload();
+				$('img.lazy').lazyload({
+					placeholder : "images/grey.gif",     //用图片提前占位
+					effect : "fadeIn",    //载入使用何种效果,effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+					threshold : 200,	
+				});
+			});
+//顶部变色
+	var banner_top = document.getElementsByClassName('banner_top')[0];
+    //	console.log(banner_top);
+	window.onscroll = function(){
+				 changeBackground();
+		}	
+	function changeBackground() {
+			//浏览器滚动的距离;
+			var scrollH = document.body.scrollTop;
+			if (scrollH >= 40){
+				banner_top.style.background = "rgba(0, 206, 116, 1)";
+				
+			}else{
+				banner_top.style.background = 'url(img/toptiao.png)';
+			}
+	}
+</script>
